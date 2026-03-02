@@ -3,7 +3,8 @@
 import { useRouter } from 'next/navigation';
 import { MochiCard } from "@/components/ui/mochi-card";
 import { MochiButton } from "@/components/ui/mochi-button";
-import { ArrowRight, Heart, Sparkles, Smile, Star } from "lucide-react";
+import { ArrowRight, Heart, MessageCircle, Sparkles, Smile, Star } from "lucide-react";
+import { LINE_BOT_URL } from "@/lib/config/constants";
 
 const translations: Record<"en" | "ja", any> = {
   en: {
@@ -13,6 +14,7 @@ const translations: Record<"en" | "ja", any> = {
     heroDesc: "I am an AI Marketing Engineer who implements your \"winning formula\" into a marketing system that runs 24/7.",
     btnStart: "Let's Consult",
     btnSpecs: "See What I Can Do",
+    btnLine: "Chat on LINE",
     phiTitle: "Automation is not about mindlessness.",
     phiDesc: "Introducing tools to eliminate tasks is becoming the standard. However, I do not offer \"build-it-and-forget-it\" automation.",
     cards: [
@@ -31,6 +33,7 @@ const translations: Record<"en" | "ja", any> = {
     heroDesc: "あなたの「勝ちパターン」を、24時間365日稼働するマーケティングシステムとして実装する、AIマーケティングエンジニアです。",
     btnStart: "30分で自動化ポイントを整理する",
     btnSpecs: "できることを見る →",
+    btnLine: "LINEで相談",
     phiTitle: "自動化は、思考停止ではない。",
     phiDesc: "ツールを入れて作業をなくすことが、当たり前になりつつあります。しかし、私は「作りっぱなし」の自動化は提供しません。",
     cards: [
@@ -82,6 +85,16 @@ export default function HomeClient({ locale }: { locale: 'en' | 'ja' }) {
               </MochiButton>
               <MochiButton variant="secondary" size="lg" onClick={() => router.push(`/${locale}/what-i-do`)}>
                 {t.btnSpecs}
+              </MochiButton>
+              <MochiButton
+                variant="secondary"
+                size="lg"
+                className="group"
+                style={{ backgroundColor: '#06C755', borderColor: '#06C755', color: 'white' }}
+                onClick={() => window.open(LINE_BOT_URL, '_blank')}
+              >
+                <MessageCircle className="mr-2 w-5 h-5" />
+                {t.btnLine}
               </MochiButton>
             </div>
           </div>
