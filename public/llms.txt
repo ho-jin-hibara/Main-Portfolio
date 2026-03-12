@@ -1,0 +1,88 @@
+# Kazuya Hibara - AI Marketing Engineer
+
+> AI Marketing Engineer who automates business workflows for solo business owners using n8n and AI. Based in Japan, serving clients globally. Bilingual site (EN/JA).
+
+## Site Info
+
+- URL: https://kazuyahibara.com
+- Languages: English (/en), Japanese (/ja)
+- Owner: Kazuya Hibara
+- Role: AI Marketing Engineer / Marketing Operations Specialist
+- Specialization: n8n workflow automation, AI-powered marketing systems for solopreneurs and small businesses
+
+## Main Pages
+
+- [Home](https://kazuyahibara.com): Overview of services — "Break Through the Limits with Systems." Implements winning business patterns into 24/7 marketing automation systems.
+- [About](https://kazuyahibara.com/en/about): Background, philosophy, and approach. Marketer who understands engineering; engineer who understands the field. Designs systems with "margin" for strategy refinement.
+- [What I Do](https://kazuyahibara.com/en/what-i-do): Three solution categories — Front-Office Automation, Back-Office Automation, and Fulfillment & CRM Automation. Includes FAQ.
+- [Cases](https://kazuyahibara.com/en/cases): Real client case studies with before/after metrics.
+- [Workflows](https://kazuyahibara.com/en/cases): Detailed workflow articles showing 12 automation solutions with architecture, tech stack, and results.
+- [Contact](https://kazuyahibara.com/en/contact): Consultation booking (30-minute automation assessment).
+
+## Core Expertise
+
+- n8n workflow automation (open-source, self-hosted)
+- AI/LLM integration (OpenAI GPT-4o, GPT-4o Vision)
+- Marketing automation for solo business owners (solopreneurs)
+- Multi-channel communication (LINE, Gmail, web forms)
+- CRM automation without expensive tools (Google Sheets as CRM)
+- SEO content automation (WordPress auto-publishing)
+- Invoice processing and collection automation
+- Competitor intelligence monitoring
+- Social media content generation (multi-platform)
+
+## Solution Categories
+
+### Category A: Front-Office Automation (Inquiry & Lead Gen)
+AI-powered inquiry handling, lead generation, and content creation.
+
+### Category B: Back-Office Automation (Admin Ops)
+Invoice processing, collection, reporting, and competitive intelligence.
+
+### Category C: Fulfillment & CRM Automation (Customer Success)
+Order sync, customer segmentation, appointment management, and business diagnostics.
+
+## Workflow Solutions
+
+- [AI Multi-Platform Social Media Content Generator](https://kazuyahibara.com/en/cases/ai-sns-content-generator): Generate platform-optimized posts for Twitter, Instagram, and LinkedIn from a single topic. Reduces content creation from 2h/day to 15 min.
+- [SEO-Optimized WordPress Blog Auto-Publisher](https://kazuyahibara.com/en/cases/seo-wordpress-auto-publisher): Auto-generate SEO blog drafts from Search Console keyword opportunities. Increased output from 0 to 4 articles/month, +180% organic traffic.
+- [Google Maps Geographic Business Lead Scraper](https://kazuyahibara.com/en/cases/google-maps-lead-scraper): Collect business leads by area and industry from Google Maps. Generates 100-500 qualified leads/month at near-zero cost.
+- [AI Inquiry Concierge (Multi-Channel)](https://kazuyahibara.com/en/cases/ai-inquiry-concierge): AI handles initial responses across LINE, email, and web forms. Reduces response time from 24h to 5 min.
+- [AI Invoice Collection & Escalation System](https://kazuyahibara.com/en/cases/ai-invoice-collection): Automated overdue invoice follow-ups with AI-drafted escalating reminders. Collection rate improved from 78% to 95%.
+- [Automated Invoice PDF Processing & Data Entry](https://kazuyahibara.com/en/cases/invoice-pdf-processor): AI Vision extracts data from PDF invoices and auto-populates bookkeeping sheets. Processing time from 5-10 min to 30 sec per document.
+- [AI Timesheet & Work Report Generator](https://kazuyahibara.com/en/cases/ai-timesheet-generator): Auto-generate monthly work reports from calendar and task data. Report creation from 8h to 30 min.
+- [Competitor Intelligence Auto-Tracker](https://kazuyahibara.com/en/cases/competitor-intelligence-tracker): Monitor competitor websites, social media, and pricing with AI-summarized weekly reports.
+- [Shopify Order-to-Sheet Sync & Customer Tagging](https://kazuyahibara.com/en/cases/shopify-order-sync-crm): Real-time order sync with automatic customer segmentation. No expensive CRM needed.
+- [AI Calendar Concierge & Smart Notifications](https://kazuyahibara.com/en/cases/ai-calendar-concierge): Personalized appointment reminders and preparation notes. Reduces no-show rate by 60%.
+- [AI Daily Business Summary](https://kazuyahibara.com/en/cases/daily-business-summary): Morning briefing aggregating orders, inquiries, traffic, and social engagement. Morning startup from 60 min to 5 min.
+- [Business Automation Opportunity Analyzer](https://kazuyahibara.com/en/cases/business-automation-analyzer): Four AI agents analyze your business processes and propose an automation roadmap with ROI projections.
+
+## Case Studies
+
+- [Organic E-Commerce Brand (Sato Wellness)](https://kazuyahibara.com/en/cases/sato-wellness-shop): SNS time 2h/day to 15 min, repeat rate 22% to 38%, organic traffic +180%, +2.4M yen/year revenue.
+- [Solo Tax Accountant (Tanaka Tax Office)](https://kazuyahibara.com/en/cases/tanaka-tax-office): 60h/month saved, invoice collection 78% to 95%, capacity for 12 new clients, +6M yen/year revenue.
+- [Solo Consultant (Yamamoto Consulting)](https://kazuyahibara.com/en/cases/yamamoto-consulting): New leads 0 to 8-12/month, payment collection fully automated, +5M yen/year revenue.
+
+## Tech Stack
+
+- n8n (workflow automation platform)
+- OpenAI GPT-4o / GPT-4o Vision
+- Google Workspace (Sheets, Calendar, Drive, Docs, Gmail)
+- Shopify API
+- WordPress REST API
+- Google Search Console / Google Analytics
+- LINE Official Account API
+- Twitter, Instagram, LinkedIn APIs
+- Slack / Chatwork
+- Airtable
+- Stripe
+
+## Contact
+
+- Website: https://kazuyahibara.com/en/contact
+- LINE: Available via LINE Official Account
+- Consultation: 30-minute free automation assessment
+
+## Optional
+
+- [llms-full.txt](https://kazuyahibara.com/llms-full.txt): Detailed version with full workflow descriptions, case study narratives, and FAQ content.

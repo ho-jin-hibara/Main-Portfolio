@@ -1,12 +1,62 @@
-import { getArticleBySlug, isWorkflow } from '@/lib/content';
+import { Metadata } from 'next';
+import { getArticleBySlug, getAllArticles, isWorkflow } from '@/lib/content';
 import { generateArticleSchema } from '@/lib/schema/article';
 import { generateHowToSchema, parseWorkflowStep } from '@/lib/schema/howto';
 import { JsonLd } from '@/components/json-ld';
 import { ArticleContent, ArticleNotFound } from '@/components/article-content';
 import type { WorkflowArticle } from '@/lib/content';
+import { locales } from '@/i18n';
+
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://kazuyahibara.com';
 
 interface PageProps {
   params: Promise<{ locale: 'en' | 'ja'; slug: string }>;
+}
+
+export function generateStaticParams() {
+  const articles = getAllArticles();
+  return locales.flatMap((locale) =>
+    articles.map((article) => ({ locale, slug: article.slug }))
+  );
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { locale, slug } = await params;
+  const article = getArticleBySlug(slug);
+
+  if (!article) {
+    return {
+      title: 'Not Found | Kazuya Hibara',
+    };
+  }
+
+  const title = locale === 'en'
+    ? `${article.titleEn} | Kazuya Hibara`
+    : `${article.titleJa} | Kazuya Hibara`;
+  const description = locale === 'en' ? article.descriptionEn : article.descriptionJa;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: `${BASE_URL}/${locale}/cases/${slug}`,
+      images: [article.heroImage],
+    },
+    twitter: {
+      title,
+      description,
+      images: [article.heroImage],
+    },
+    alternates: {
+      canonical: `${BASE_URL}/${locale}/cases/${slug}`,
+      languages: {
+        en: `${BASE_URL}/en/cases/${slug}`,
+        ja: `${BASE_URL}/ja/cases/${slug}`,
+      },
+    },
+  };
 }
 
 export default async function ArticlePage({ params }: PageProps) {

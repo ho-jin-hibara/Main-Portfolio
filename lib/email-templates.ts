@@ -1,6 +1,6 @@
 import type { InsertContact } from '@shared/schema';
 
-export function buildNotificationEmail(data: InsertContact): { subject: string; html: string } {
+export function buildNotificationEmail(data: InsertContact, tracking?: Record<string, string>): { subject: string; html: string } {
   const subject = `New inquiry from ${data.name}`;
 
   const html = `
@@ -45,6 +45,13 @@ export function buildNotificationEmail(data: InsertContact): { subject: string; 
       ${data.preferredContactMethod ? `
       <div class="label">Preferred Contact Method</div>
       <div class="value">${escapeHtml(data.preferredContactMethod)}</div>
+      ` : ''}
+
+      ${tracking && Object.keys(tracking).length > 0 ? `
+      <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid #eee;">
+        <div class="label">Tracking Data</div>
+        <div class="value" style="font-size: 13px; color: #999;">${Object.entries(tracking).map(([k, v]) => `${escapeHtml(k)}: ${escapeHtml(v)}`).join('<br>')}</div>
+      </div>
       ` : ''}
     </div>
     <div class="footer">

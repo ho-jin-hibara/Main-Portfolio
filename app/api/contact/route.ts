@@ -37,6 +37,10 @@ export async function POST(request: Request) {
 
     const body = await request.json();
 
+    // Extract tracking data before validation (not stored in DB)
+    const trackingData = body._tracking || {};
+    delete body._tracking;
+
     // Validate the request body
     const validatedData = insertContactSchema.parse(body);
 
@@ -50,7 +54,7 @@ export async function POST(request: Request) {
       const emailPromises: Promise<unknown>[] = [];
 
       // Notification email to site owner
-      const notification = buildNotificationEmail(validatedData);
+      const notification = buildNotificationEmail(validatedData, trackingData);
       emailPromises.push(
         resend.emails.send({
           from: FROM_EMAIL,

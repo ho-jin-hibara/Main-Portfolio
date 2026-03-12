@@ -4,7 +4,8 @@ import { useRouter } from 'next/navigation';
 import { MochiCard } from "@/components/ui/mochi-card";
 import { MochiButton } from "@/components/ui/mochi-button";
 import { Sparkles, Send, CheckCircle, AlertCircle } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { trackEvent } from "@/components/google-analytics";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -90,6 +91,19 @@ export function ContactForm({ locale }: ContactFormProps) {
   const [contactMethod, setContactMethod] = useState<string>('email');
   const [otherTools, setOtherTools] = useState('');
   const [otherContact, setOtherContact] = useState('');
+  const [utmData, setUtmData] = useState<Record<string, string>>({});
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const utm: Record<string, string> = {};
+    for (const key of ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content']) {
+      const val = params.get(key);
+      if (val) utm[key] = val;
+    }
+    if (document.referrer) utm.referrer = document.referrer;
+    utm.landing_page = window.location.pathname;
+    setUtmData(utm);
+  }, []);
 
   const handleToolToggle = (tool: string) => {
     setSelectedTools(prev =>
@@ -120,6 +134,7 @@ export function ContactForm({ locale }: ContactFormProps) {
       currentChallenges: formData.get('challenges'),
       toolsUsed,
       preferredContactMethod,
+      _tracking: utmData,
     };
 
     try {
@@ -135,6 +150,7 @@ export function ContactForm({ locale }: ContactFormProps) {
         throw new Error('Failed to submit form');
       }
 
+      trackEvent('form_submit', 'contact', utmData.utm_source || 'direct');
       setFormState('success');
     } catch (error) {
       console.error('Form submission error:', error);

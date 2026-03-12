@@ -1,0 +1,434 @@
+# Kazuya Hibara - AI Marketing Engineer (Full Documentation)
+
+> AI Marketing Engineer who automates business workflows for solo business owners using n8n and AI. Based in Japan, serving clients globally. Bilingual site (EN/JA).
+
+## Site Info
+
+- URL: https://kazuyahibara.com
+- Languages: English (/en), Japanese (/ja)
+- Owner: Kazuya Hibara
+- Role: AI Marketing Engineer / Marketing Operations Specialist
+- Specialization: n8n workflow automation, AI-powered marketing systems for solopreneurs and small businesses
+
+---
+
+## About Kazuya Hibara
+
+Kazuya Hibara is a marketing operations specialist who builds automation systems for solo business owners. He transforms manual winning patterns into AI-powered workflows using n8n, helping clients save 60+ hours monthly and focus on growth strategy.
+
+Through designing and operating marketing strategies, and building backend workflows (n8n / Google Tools / LLM), he occupies the position of an "Engineer who understands the field."
+
+### Main Concept
+"Break Through the Limits of a One-Person Business with Systems." — Implementing your "winning formula" into a system that operates 24 hours a day.
+
+### Philosophy: Automation is Not Mindlessness
+- Does not offer "build-it-and-forget-it" automation
+- Designs systems with "margin" — allowing clients to refine products and strategy
+- Values feedback — builds systems where business decision data naturally gathers through daily operations
+
+### As a Marketer
+- Refuses to "introduce tools for the sake of tools"
+- Prioritizes increasing the resolution of the "Winning Formula" already working in each business
+- Analyzes the full customer journey: Awareness, Trust, Consideration, Action
+- Designs systems only after clarifying the "flow that sells because it works"
+- Does not introduce complex workflows or non-essential tools
+
+### As an Engineer
+- Manages the entire technical backend (n8n, API, LLM) under his responsibility
+- Clients don't need to worry about code or tool specification changes
+- Think of it as hiring a "Monthly Systems Department" — stable functions you just use
+- Prioritizes simplicity and clarity: intuitive reports, no learning curve, automation within existing workflows
+
+### Partnership Style
+- Works as an "external member who understands the field," not a consultant
+- No need for perfect specs or fancy documents
+- Start small, stop if it doesn't fit
+
+---
+
+## Three Solution Categories
+
+### Category A: Front-Office Automation (Inquiry & Lead Gen)
+Before: Chasing replies, missed leads, answering FAQs all day.
+After: AI Concierge — AI learned from past data handles primary responses, hearings, and scheduling.
+Tech: n8n, OpenAI, Gmail/Instagram API, Google Calendar.
+
+### Category B: Back-Office/Admin Automation (Admin Ops)
+Before: Copy-pasting from forms to sheets, manual invoicing, missed data transfers.
+After: Data Pipelines — Application to List Add to Invoice to Chat Notification. No human touch until final approval.
+Tech: n8n, Google Sheets, Stripe, Slack/Chatwork.
+
+### Category C: Fulfillment & CRM Automation (Customer Success)
+Before: Manual "Thank you" emails, forgotten follow-ups, time-consuming individual advice.
+After: Systemized Service Flow — Onboarding, follow-ups based on customer attributes, and AI-drafted individual reports.
+Tech: n8n, OpenAI, CRM Tools, LINE Official Account.
+
+---
+
+## Workflow Solutions (Detailed)
+
+### 1. AI Multi-Platform Social Media Content Generator
+- URL: https://kazuyahibara.com/en/cases/ai-sns-content-generator
+- Category: Front-Office Automation
+- Tech Stack: n8n, OpenAI, Twitter API, Instagram API, LinkedIn API
+
+**Problem:** Posting to multiple social media platforms daily consumes 2+ hours. Each platform demands different formats, character limits, hashtag strategies, and tone — copying and pasting the same message everywhere looks lazy and performs poorly.
+
+**Solution:** Feed a single topic, URL, or product update into the workflow. GPT-4o generates platform-specific content: a Twitter thread with hooks, an Instagram caption with relevant hashtags, and a LinkedIn article with professional framing. Each post is queued for scheduled publishing.
+
+**How It Works:**
+1. Trigger: Manual input or scheduled RSS/webhook for new content
+2. AI Generation: GPT-4o creates platform-optimized variants with tone and format adjustments
+3. Review Gate: Posts are sent to Slack/email for optional human approval
+4. Publishing: Approved posts are scheduled via each platform's API
+5. Analytics: Engagement data is logged to Google Sheets for performance tracking
+
+**Results:** Social media content creation time reduced from 2 hours/day to 15 minutes. Consistent posting frequency maintained across all platforms without burnout.
+
+---
+
+### 2. SEO-Optimized WordPress Blog Auto-Publisher
+- URL: https://kazuyahibara.com/en/cases/seo-wordpress-auto-publisher
+- Category: Front-Office Automation
+- Tech Stack: n8n, OpenAI, WordPress REST API, Google Search Console
+
+**Problem:** Blog content is critical for organic search traffic, but writing SEO-optimized articles takes 4-6 hours each. Most solo business owners abandon their blog within months, losing a key acquisition channel.
+
+**Solution:** The workflow monitors Google Search Console for keyword opportunities (high impressions, low click-through), then generates SEO-optimized article drafts with proper heading structure, meta descriptions, and internal linking suggestions. Drafts are published to WordPress for human review before going live.
+
+**How It Works:**
+1. Monitor: Weekly scan of Search Console for keyword gaps and opportunities
+2. Research: AI analyzes top-ranking content for the target keyword
+3. Draft: GPT-4o generates a structured article with H2/H3 headings, meta tags, and alt text
+4. Publish: Article is pushed to WordPress as a draft with featured image suggestion
+5. Notify: Slack/email notification with preview link for human review
+
+**Results:** Blog output increased from 0 to 4 SEO articles per month. Organic search traffic grew 180% within 3 months with minimal manual effort.
+
+---
+
+### 3. Google Maps Geographic Business Lead Scraper
+- URL: https://kazuyahibara.com/en/cases/google-maps-lead-scraper
+- Category: Front-Office Automation
+- Tech Stack: n8n, Google Maps API, Google Sheets, Gmail
+
+**Problem:** Finding new business prospects requires hours of manual searching, copying contact details from Google Maps one by one, and maintaining scattered lists. Without a systematic approach, outreach is inconsistent and opportunities are missed.
+
+**Solution:** The workflow searches Google Maps by industry and geographic area (e.g., "tax accountants in Shibuya"), extracts business name, email, phone, rating, and website URL. It deduplicates against your existing contact list and optionally sends personalized outreach emails.
+
+**How It Works:**
+1. Configure: Set target industry keywords and geographic areas
+2. Scrape: n8n queries Google Maps API and extracts structured business data
+3. Deduplicate: Compare results against existing contacts in Google Sheets
+4. Enrich: Add website and social media links where available
+5. Outreach: Optionally trigger personalized cold email via Gmail
+
+**Results:** Generates 100-500 qualified leads per month at near-zero cost. Replaces hours of manual prospecting with a systematic, repeatable pipeline.
+
+---
+
+### 4. AI Inquiry Concierge (Multi-Channel)
+- URL: https://kazuyahibara.com/en/cases/ai-inquiry-concierge
+- Category: Front-Office Automation
+- Tech Stack: n8n, OpenAI, LINE Official Account, Gmail, Google Calendar
+
+**Problem:** Inquiries arrive via LINE, email, and website forms throughout the day. Responding within minutes is critical for conversion, but solo operators cannot monitor all channels 24/7. Delayed responses mean lost leads.
+
+**Solution:** AI reads incoming inquiries across all channels, classifies intent (FAQ, consultation request, urgent), generates contextual first responses, conducts initial hearing questions, and when the prospect is ready, auto-schedules a consultation via Google Calendar.
+
+**How It Works:**
+1. Receive: Webhook captures inquiries from LINE, Gmail, and web forms
+2. Classify: AI determines intent type and urgency level
+3. Respond: Generates a contextual first response using past conversation data
+4. Hearing: Asks structured follow-up questions to qualify the lead
+5. Schedule: When ready, offers available slots and books via Google Calendar
+
+**Results:** Response time reduced from 24 hours to under 5 minutes. AI handles 80% of initial inquiries autonomously, freeing 3+ hours per day.
+
+---
+
+### 5. AI Invoice Collection & Escalation System
+- URL: https://kazuyahibara.com/en/cases/ai-invoice-collection
+- Category: Back-Office Automation
+- Tech Stack: n8n, OpenAI, Google Sheets, Gmail, Slack
+
+**Problem:** Chasing overdue invoices is awkward and time-consuming. Many solo operators avoid sending reminders out of discomfort, resulting in chronic cash flow problems and tens of thousands of yen left on the table every month.
+
+**Solution:** The workflow monitors outstanding invoices in a spreadsheet, sends automated reminder emails at configurable intervals (7, 14, 21, 30 days), with AI drafting increasingly firm but professional messages. You are notified via Slack only when manual escalation is truly needed.
+
+**How It Works:**
+1. Track: Monitor invoice spreadsheet for overdue items daily
+2. Draft: AI generates reminder email matching the escalation stage (polite to firm to formal)
+3. Send: Automatically send via Gmail with appropriate tone and urgency
+4. Log: Record all communications and payment status updates
+5. Escalate: Notify you via Slack/Chatwork only when human intervention is needed
+
+**Results:** Invoice collection rate improved from 78% to 95% within payment terms. Eliminated the psychological burden of chasing payments manually.
+
+---
+
+### 6. Automated Invoice PDF Processing & Data Entry
+- URL: https://kazuyahibara.com/en/cases/invoice-pdf-processor
+- Category: Back-Office Automation
+- Tech Stack: n8n, OpenAI Vision, Google Sheets, Google Drive
+
+**Problem:** Manually entering invoice data from PDFs into spreadsheets is tedious and error-prone. Each invoice takes 5-10 minutes to process, and data entry mistakes cause accounting headaches at tax time.
+
+**Solution:** When a PDF invoice arrives via email or is uploaded to Google Drive, GPT-4o Vision extracts vendor name, amount, date, line items, and tax details. Parsed data is written to a structured Google Sheet. Anomalies are flagged for human review.
+
+**How It Works:**
+1. Detect: Monitor Gmail attachments and Google Drive folder for new PDF invoices
+2. Extract: GPT-4o Vision reads the PDF and extracts structured data (25+ fields)
+3. Validate: Cross-check extracted amounts and dates for consistency
+4. Record: Write validated data to Google Sheets bookkeeping template
+5. Flag: Alert via Slack if confidence is low or anomalies are detected
+
+**Results:** Invoice processing time reduced from 5-10 minutes to under 30 seconds per document. Data entry accuracy improved to 98%+.
+
+---
+
+### 7. AI Timesheet & Work Report Generator
+- URL: https://kazuyahibara.com/en/cases/ai-timesheet-generator
+- Category: Back-Office Automation
+- Tech Stack: n8n, OpenAI, Google Calendar, Google Sheets, Google Docs
+
+**Problem:** Creating monthly work reports for clients or compliance is a dreaded end-of-month task. Reconstructing what you did from memory or scattered notes takes hours and the results are often incomplete.
+
+**Solution:** The workflow pulls calendar events, task completions, and email activity data. AI generates formatted timesheet entries and a narrative work report. Output goes to Google Sheets and optionally creates a Google Doc summary for client delivery.
+
+**How It Works:**
+1. Collect: Pull events from Google Calendar and task data from project tools
+2. Aggregate: Group activities by client, project, and category
+3. Generate: AI writes timesheet entries and narrative summary
+4. Format: Output structured data to Google Sheets and optional Google Doc
+5. Deliver: Send report to client or archive for compliance
+
+**Results:** Monthly report creation reduced from 8 hours to 30 minutes (review only). Reports are more detailed and consistent than manually written ones.
+
+---
+
+### 8. Competitor Intelligence Auto-Tracker
+- URL: https://kazuyahibara.com/en/cases/competitor-intelligence-tracker
+- Category: Back-Office Automation
+- Tech Stack: n8n, OpenAI, HTTP Request, Google Sheets, Slack
+
+**Problem:** Staying aware of competitor moves is important but falls off the priority list when you're busy with client work. Competitors launch new services, change pricing, or publish content — and you only find out from clients.
+
+**Solution:** The workflow periodically monitors competitor websites, social media accounts, and pricing pages. AI summarizes changes and highlights strategic moves. A weekly digest is delivered via Slack/Chatwork with a structured log in Google Sheets.
+
+**How It Works:**
+1. Configure: Set competitor URLs, social accounts, and monitoring frequency
+2. Scrape: n8n fetches web pages and social feeds on schedule
+3. Compare: Detect changes by comparing with previous snapshots
+4. Analyze: AI summarizes what changed and why it matters
+5. Report: Weekly digest to Slack + detailed log in Google Sheets
+
+**Results:** From zero competitive awareness to structured weekly intelligence briefings. Enables proactive rather than reactive business strategy.
+
+---
+
+### 9. Shopify Order-to-Sheet Sync & Customer Tagging
+- URL: https://kazuyahibara.com/en/cases/shopify-order-sync-crm
+- Category: Fulfillment & CRM Automation
+- Tech Stack: n8n, Shopify API, Google Sheets, Airtable
+
+**Problem:** Customer data is trapped in Shopify admin with limited segmentation. You can't easily identify who's a first-time buyer vs. loyal repeat customer vs. someone about to churn — making targeted marketing impossible without expensive CRM tools.
+
+**Solution:** Every Shopify order triggers a real-time sync to Google Sheets. The workflow automatically tags customers based on purchase behavior: first-time, repeat, high-value, and at-risk (no purchase in 60+ days). This creates a live CRM without CRM subscription costs.
+
+**How It Works:**
+1. Trigger: Shopify webhook fires on every new order
+2. Sync: Order details (items, amount, customer info) written to Google Sheets
+3. Analyze: Customer purchase history is evaluated for segmentation
+4. Tag: Automatic labels applied: first-time, repeat, high-value, at-risk
+5. Action: Optional trigger for segment-specific follow-up workflows
+
+**Results:** Complete customer visibility without CRM costs. Customer repeat purchase rate improved through targeted follow-up enabled by segmentation.
+
+---
+
+### 10. AI Calendar Concierge & Smart Notifications
+- URL: https://kazuyahibara.com/en/cases/ai-calendar-concierge
+- Category: Fulfillment & CRM Automation
+- Tech Stack: n8n, Google Calendar, OpenAI, LINE Official Account, Gmail
+
+**Problem:** Appointment no-shows waste valuable time. Generic "You have an appointment tomorrow" reminders don't motivate clients to prepare. Manually sending personalized preparation notes before each meeting is unsustainable.
+
+**Solution:** AI generates contextual preparation notes for upcoming appointments — e.g., "Please bring your tax documents for tomorrow's consultation" for a tax client, or "Your skincare routine check-in is tomorrow" for a wellness client. Sent via LINE or email at the right timing.
+
+**How It Works:**
+1. Scan: Check Google Calendar for upcoming appointments (24h and 2h before)
+2. Context: Pull client history and appointment type from CRM sheet
+3. Generate: AI creates personalized reminder with preparation instructions
+4. Send: Deliver via LINE or email based on client preference
+5. Track: Log delivery status and reduce no-show rates over time
+
+**Results:** No-show rate reduced by 60%. Client satisfaction improved through personalized, thoughtful communication. Zero manual effort per appointment.
+
+---
+
+### 11. AI Daily Business Summary
+- URL: https://kazuyahibara.com/en/cases/daily-business-summary
+- Category: Fulfillment & CRM Automation
+- Tech Stack: n8n, OpenAI, Google Sheets, Google Analytics, Slack
+
+**Problem:** Starting the day means checking Shopify, Gmail, Google Analytics, social media notifications, and spreadsheets separately. By the time you've assembled a picture of yesterday's business, an hour has passed and you still don't have clear priorities.
+
+**Solution:** The workflow aggregates data from all business sources overnight and uses AI to generate a concise morning briefing: key metrics, notable events, and suggested priorities for the day. Delivered to LINE or Slack at your preferred time.
+
+**How It Works:**
+1. Aggregate: Pull data from Shopify, Gmail, Analytics, social platforms, and CRM sheets
+2. Analyze: AI identifies trends, anomalies, and urgent items
+3. Prioritize: Generate suggested action items ranked by impact
+4. Format: Create a scannable morning briefing with key numbers
+5. Deliver: Send to Slack or LINE at scheduled time (e.g., 7:00 AM)
+
+**Results:** Morning startup time reduced from 60 minutes to 5 minutes. Clear daily priorities from day one. No more missed urgent items buried in multiple dashboards.
+
+---
+
+### 12. Business Automation Opportunity Analyzer
+- URL: https://kazuyahibara.com/en/cases/business-automation-analyzer
+- Category: Fulfillment & CRM Automation
+- Tech Stack: n8n, OpenAI, Google Forms, Google Sheets
+
+**Problem:** Business owners know they should automate but don't know where to start. Which processes have the highest ROI for automation? Without a structured analysis, they either automate the wrong things first or stay paralyzed by choice.
+
+**Solution:** A diagnostic questionnaire feeds into four specialized AI agents that analyze different aspects: time waste identification, error-prone task detection, scalability bottleneck analysis, and cost reduction opportunities. The output is a prioritized automation roadmap.
+
+**How It Works:**
+1. Input: Client fills out a structured questionnaire about their business processes
+2. Agent 1: Analyzes time-intensive tasks and estimates automation savings
+3. Agent 2: Identifies error-prone manual processes and quality risks
+4. Agent 3: Evaluates scalability bottlenecks that limit growth
+5. Agent 4: Calculates cost reduction opportunities with ROI projections
+6. Output: Consolidated automation roadmap with 90-day implementation plan
+
+**Results:** Provides a clear starting point for automation investment. Can be used as a lead magnet — the diagnostic itself generates qualified prospects who are ready to buy.
+
+---
+
+## Case Studies (Detailed)
+
+### Case Study 1: Organic E-Commerce Brand — Sato Wellness Shop
+- URL: https://kazuyahibara.com/en/cases/sato-wellness-shop
+- Business: Solo E-Commerce Owner (incorporated), Online (Shopify + Instagram)
+- Revenue: 8M yen/year (growing 30% YoY), Staff: 1 (fulfillment outsourced)
+
+**Pain Points:**
+- Posting to 3 social media platforms daily takes 2 hours — manually creating different content for each
+- No systematic customer follow-up after purchase; relying on hope that customers return
+- Cannot identify loyal customers vs. churn risks — all data trapped in Shopify admin
+- Blog abandoned after 2 months because writing SEO articles takes too long; organic search traffic is near zero
+
+**Workflows Deployed:**
+1. AI SNS Content Generator
+2. SEO Blog Auto-Publisher
+3. Shopify Order Sync & Customer Tagging
+4. AI Calendar Concierge (repurposed for post-purchase follow-ups)
+5. Daily Business Summary
+
+**Results:**
+- SNS Content Time: 2h/day to 15 min/day
+- Blog Output: 0/month to 4/month
+- Organic Search Traffic: +180%
+- Customer Repeat Rate: 22% to 38%
+- Revenue Impact: +2.4M yen/year
+
+**Narrative:** Mai Sato launched an organic wellness brand on Shopify two years ago. Sales were growing 30% year-over-year driven by Instagram, but the growth was entirely dependent on Mai's daily manual hustle. She was spending 2 hours every morning creating posts for Instagram, Twitter, and LINE — often at the expense of product development. The blog had been abandoned months ago. Worst of all, there was no system to bring customers back after their first purchase.
+
+Five integrated workflows transformed the business. Social media went from a 2-hour daily burden to a 15-minute review task. The blog grew from zero to 4 articles/month, driving a 180% increase in organic search traffic within 3 months. The customer repeat rate jumped from 22% to 38% through systematic post-purchase nurturing.
+
+---
+
+### Case Study 2: Solo Tax Accountant — Tanaka Tax Office
+- URL: https://kazuyahibara.com/en/cases/tanaka-tax-office
+- Business: Solo Tax Accountant (incorporated), Saitama, Japan
+- Revenue: 15M yen/year, Staff: 1 + part-time assistant
+
+**Pain Points:**
+- Spending 3 hours/day answering client inquiries via email and LINE — the same 20 questions repeated
+- Invoice collection is entirely manual — clients pay late, but reminders avoided out of discomfort
+- End-of-year tax season is brutal: manually creating work reports for each of 30 clients
+- Wants to take on 10+ new clients but physically cannot handle the administrative workload
+
+**Workflows Deployed:**
+1. AI Inquiry Concierge
+2. AI Invoice Collection System
+3. AI Timesheet Generator
+4. Daily Business Summary
+
+**Results:**
+- Inquiry Response Time: 24h to 5 min
+- Invoice Collection Rate: 78% to 95%
+- Monthly Report Creation: 8h/month to 30 min
+- Time Saved: 60h/month
+- Revenue Impact: +6M yen/year (12 new clients without additional staff)
+
+---
+
+### Case Study 3: Solo Consultant — Yamamoto Consulting
+- URL: https://kazuyahibara.com/en/cases/yamamoto-consulting
+- Business: Solo Business Consultant / Executive Coach (incorporated), Tokyo, Japan
+- Revenue: 20M yen/year, Staff: 1
+
+**Pain Points:**
+- Lead generation relies entirely on referrals and LinkedIn network — zero systematic outreach
+- Invoices created manually in Excel, often sent late, embarrassed to follow up on late payments
+- No competitive intelligence — clients sometimes mention competitor moves he is unaware of
+- Wants to expand services but has no time or content pipeline
+
+**Workflows Deployed:**
+1. Google Maps Lead Scraper
+2. AI Invoice Collection System
+3. Invoice PDF Processor
+4. Competitor Intelligence Tracker
+5. Business Automation Analyzer (used as lead magnet)
+
+**Results:**
+- New Qualified Leads: 0/month to 8-12/month
+- Invoice Processing: 3h/month to 15 min
+- Payment Follow-up: Manual (avoided) to fully automated
+- Competitive Intelligence: None to weekly AI briefing
+- Revenue Impact: +5M yen/year
+
+---
+
+## Frequently Asked Questions
+
+### What is n8n automation and how does it help solopreneurs?
+n8n is an open-source workflow automation platform that connects your business tools (Gmail, Sheets, Stripe, OpenAI) without code. For solopreneurs, it eliminates repetitive tasks like data entry, follow-up emails, and invoice generation — typically saving 60+ hours monthly.
+
+### How long does it take to set up an automation system?
+Most automation projects take 2-4 weeks from initial consultation to deployment. Simple workflows (like email automation) can be live in a week, while complex multi-step systems with AI integration typically require 3-4 weeks for proper testing.
+
+### Do I need technical skills to use the automated systems?
+No technical skills required. Systems are designed to work within your existing tools (Gmail, Sheets, Slack). You continue using familiar interfaces while automation handles the backend. Simple documentation and training are provided.
+
+### What happens if something breaks or needs to change?
+All automation packages include monthly maintenance and monitoring. Issues are proactively fixed before they affect your business, and updates are handled when tools change their APIs. Priority support is available for urgent issues.
+
+### How much does automation cost compared to hiring staff?
+A typical automation system costs 3-6 months of a part-time employee salary as one-time setup, then minimal monthly maintenance. Unlike staff, automation works 24/7 without sick days, errors from fatigue, or training overhead.
+
+### Can AI really handle customer inquiries professionally?
+Yes, with proper setup. AI is trained on past successful interactions, brand voice, and edge cases. The AI handles 80% of routine inquiries while flagging complex cases for personal attention. Many clients report improved response times and customer satisfaction.
+
+---
+
+## Tech Stack
+
+- **Automation Platform:** n8n (open-source, self-hosted)
+- **AI/LLM:** OpenAI GPT-4o, GPT-4o Vision
+- **Communication:** Gmail, LINE Official Account, Slack, Chatwork
+- **Data:** Google Sheets, Google Drive, Google Docs, Airtable
+- **E-Commerce:** Shopify API, Stripe
+- **Content:** WordPress REST API, Twitter API, Instagram API, LinkedIn API
+- **Analytics:** Google Search Console, Google Analytics
+- **Scheduling:** Google Calendar
+
+## Contact
+
+- Website: https://kazuyahibara.com/en/contact
+- LINE: Available via LINE Official Account
+- Consultation: 30-minute free automation assessment

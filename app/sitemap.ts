@@ -11,7 +11,7 @@ interface StaticPage {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://kazuya.work'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://kazuyahibara.com'
   const locales = routing.locales
   const entries: MetadataRoute.Sitemap = []
 
