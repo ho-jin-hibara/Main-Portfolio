@@ -42,12 +42,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title,
       description,
       url: `${BASE_URL}/${locale}/cases/${slug}`,
-      images: [article.heroImage],
+      images: [
+        { url: `/api/og?title=${encodeURIComponent(article.titleEn)}&subtitle=Case+Study`, width: 1200, height: 630 },
+      ],
     },
     twitter: {
       title,
       description,
-      images: [article.heroImage],
+      images: [
+        { url: `/api/og?title=${encodeURIComponent(article.titleEn)}&subtitle=Case+Study`, width: 1200, height: 630 },
+      ],
     },
     alternates: {
       canonical: `${BASE_URL}/${locale}/cases/${slug}`,

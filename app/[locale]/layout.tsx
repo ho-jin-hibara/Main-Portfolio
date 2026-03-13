@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       type: 'website',
       siteName: 'Kazuya Hibara',
       locale: locale === 'ja' ? 'ja_JP' : 'en_US',
-      images: ['/opengraph.png'],
+      images: [{ url: '/api/og?title=Kazuya+Hibara&subtitle=AI+Marketing+Engineer', width: 1200, height: 630, alt: 'Kazuya Hibara | AI Marketing Engineer' }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -62,7 +62,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       description: locale === 'en'
         ? 'AI Marketing Engineer automating business workflows with n8n and AI. Transform your winning formula into a 24/7 marketing system.'
         : 'n8nとAIでビジネスワークフローを自動化するAIマーケティングエンジニア。勝ちパターンを24時間稼働のマーケティングシステムに変換します。',
-      images: ['/opengraph.png'],
+      images: [{ url: '/api/og?title=Kazuya+Hibara&subtitle=AI+Marketing+Engineer', width: 1200, height: 630, alt: 'Kazuya Hibara | AI Marketing Engineer' }],
     },
     robots: {
       index: true,

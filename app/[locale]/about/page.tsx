@@ -19,10 +19,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       title,
       description,
       url: `${BASE_URL}/${locale}/about`,
+      images: [{ url: '/api/og?title=About&subtitle=Kazuya+Hibara+-+AI+Marketing+Engineer', width: 1200, height: 630 }],
     },
     twitter: {
       title,
       description,
+      images: [{ url: '/api/og?title=About&subtitle=Kazuya+Hibara+-+AI+Marketing+Engineer', width: 1200, height: 630 }],
     },
     alternates: {
       canonical: `${BASE_URL}/${locale}/about`,

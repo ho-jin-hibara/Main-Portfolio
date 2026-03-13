@@ -25,10 +25,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title,
       description,
       url: `${SITE_URL}/${locale}/what-i-do`,
+      images: [{ url: '/api/og?title=AI+Workflow+Automation&subtitle=Services+%26+Solutions', width: 1200, height: 630 }],
     },
     twitter: {
       title,
       description,
+      images: [{ url: '/api/og?title=AI+Workflow+Automation&subtitle=Services+%26+Solutions', width: 1200, height: 630 }],
     },
     alternates: {
       canonical: `${SITE_URL}/${locale}/what-i-do`,
